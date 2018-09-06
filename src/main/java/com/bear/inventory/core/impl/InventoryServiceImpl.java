@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class InventoryServiceImpl implements InventoryService {
     @Override
     public void write(TradeContext tradeContext) {
-        ActionChain actionChain = new ActionChain();
+        ActionChain<TradeContext> actionChain = new ActionChain<>();
         actionChain
                 .appendAction(TradePreCheckAction.class)
                 .appendAction(TradeValidateAction.class)
