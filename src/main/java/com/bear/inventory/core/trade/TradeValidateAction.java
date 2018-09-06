@@ -1,4 +1,4 @@
-package com.bear.inventory.core.increase;
+package com.bear.inventory.core.trade;
 
 import com.bear.inventory.core.common.IAction;
 import com.bear.inventory.core.common.InventoryRuntimeException;

@@ -1,4 +1,4 @@
-package com.bear.inventory.core.increase;
+package com.bear.inventory.core.trade;
 
 import com.bear.inventory.core.common.ActionContext;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class IncreaseContext extends ActionContext {
     /**
-     * increase count
+     * trade count
      */
     private Integer count;
     /**
