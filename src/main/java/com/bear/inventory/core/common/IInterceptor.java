@@ -22,7 +22,7 @@ public interface IInterceptor {
      * error intercept
      * @param actionContext
      */
-    void errorIntercept(ActionContext actionContext, IAction iAction, Throwable ex);
+    void errorIntercept(ActionContext actionContext, IAction iAction, Throwable ex, ActionResult actionResult);
 
     /**
      * final intercept

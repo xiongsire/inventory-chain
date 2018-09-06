@@ -8,12 +8,10 @@ import org.springframework.stereotype.Component;
  * 2018/9/4
  */
 @Component
-public class SKULineGroupAction implements IAction<IncreaseContext> {
+public class TradeGroupAction implements IAction<TradeContext> {
 
     @Override
-    public void execute(IncreaseContext context) throws RuntimeException {
-
-        // 对订单下不同 sku 按照唯一库存行分组
-        System.out.println("拆分");
+    public void execute(TradeContext context) throws RuntimeException {
+        System.out.println("3. TradeGroupAction：按照唯一库存行分组");
     }
 }

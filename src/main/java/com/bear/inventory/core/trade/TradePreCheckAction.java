@@ -8,10 +8,16 @@ import org.springframework.stereotype.Component;
  * @since 2018/04/08
  */
 @Component
-public class PreCheckAction implements IAction<IncreaseContext> {
+public class TradePreCheckAction implements IAction<TradeContext> {
 
+    /**
+     * 前置校验参数的合法性
+     * 1. 请求最大长度限制
+     * 2. 请求参数大于零限制
+     * @param actionContext
+     */
     @Override
-    public void execute(IncreaseContext actionContext) {
-        System.out.println("pre check action, it is idempotent: " + actionContext.getIdempotent());
+    public void execute(TradeContext actionContext) {
+        System.out.println("1. TradePreCheckAction：前置参数校验");
     }
 }

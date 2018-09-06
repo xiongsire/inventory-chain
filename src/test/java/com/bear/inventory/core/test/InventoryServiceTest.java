@@ -1,6 +1,6 @@
 package com.bear.inventory.core.test;
 
-import com.bear.inventory.core.increase.IncreaseContext;
+import com.bear.inventory.core.trade.TradeContext;
 import com.bear.inventory.core.service.InventoryService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,8 +20,8 @@ public class InventoryServiceTest {
 
     @Test
     public void test() {
-        IncreaseContext increaseContext =
-            IncreaseContext.builder().count(1).idempotent(false).build();
-        inventoryService.write(increaseContext);
+        TradeContext tradeContext =
+            TradeContext.builder().idempotent(false).build();
+        inventoryService.write(tradeContext);
     }
 }

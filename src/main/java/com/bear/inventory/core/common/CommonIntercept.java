@@ -8,23 +8,24 @@ public class CommonIntercept implements IInterceptor {
 
     @Override
     public void preIntercept(ActionContext actionContext, IAction iAction) {
-        System.out.println("pre intercept");
+        //System.out.println("pre intercept");
     }
 
     @Override
     public void afterIntercept(ActionContext actionContext, IAction iAction) {
-        System.out.println("after intercept");
+        //System.out.println("after intercept");
     }
 
     @Override
-    public void errorIntercept(ActionContext actionContext, IAction iAction, Throwable ex) {
+    public void errorIntercept(ActionContext actionContext, IAction iAction, Throwable ex, ActionResult actionResult) {
         InventoryRuntimeException inventoryRuntimeException = (InventoryRuntimeException) ex;
         inventoryRuntimeException.getMessage();
+        actionResult.setSuccess(false);
         System.out.println(inventoryRuntimeException.getMsg());
     }
 
     @Override
     public void finalIntercept(ActionContext actionContext, IAction iAction) {
-        System.out.println("final intercept");
+        //System.out.println("final intercept");
     }
 }
